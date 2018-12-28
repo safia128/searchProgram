@@ -6,14 +6,13 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    int i,j;
-    cout<<"Number of arguments: "<< argc;
-    for(i=0;i< argc;i++)
-    {
-        cout<<endl<< i << "argument: "<< argv[i];
+    int i,j,r,c;
+
+    if (argc < 3) {
+	cout << "Number of rows and columns missing in command line" << endl;
+        return -1;
     }
-    cout<<endl;
-    int r,c;
+
     r = atoi(argv[1]);
     c = atoi(argv[2]);
 
@@ -27,14 +26,14 @@ int main(int argc, char* argv[])
             matrx[i][j]= rand();
         }
     }
-    for(i=0;i<r;i++)
-    {
-        for(j=0;j<c;j++)
-        {
-            cout<<matrx[i][j]<<"\t";
-        }
-        cout<<endl<<endl;
-    }
+    //for(i=0;i<r;i++)
+    //{
+    //    for(j=0;j<c;j++)
+    //    {
+    //        cout<<matrx[i][j]<<"\t";
+    //    }
+    //    cout<<endl<<endl;
+    //}
     ofstream myfile;
     myfile.open("matrix.dat");
     for(i=0;i<r;i++)
