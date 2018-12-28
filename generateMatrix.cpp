@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     {
         for(j=0;j<c;j++)
         {
-            matrx[i][j]= rand()%500;
+            matrx[i][j]= rand();
         }
     }
     for(i=0;i<r;i++)
